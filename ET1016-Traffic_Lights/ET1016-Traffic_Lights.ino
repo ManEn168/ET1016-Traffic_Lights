@@ -19,12 +19,12 @@ PassiveBuzzer buz(PassiveBuzzerPin);
 
 
 void setup() {
-  pinMode(BUTTONK1,INPUT_PULLUP);
-  pinMode(BUTTONK2, INPUT_PULLUP);
   pinMode(LED_RED,OUTPUT);
   pinMode(LED_BLUE,OUTPUT);
   pinMode(LED_GREEN,OUTPUT);
-  pinMode(LED_YELLOW,OUTPUT); 
+  pinMode(LED_YELLOW,OUTPUT);
+  pinMode(BUTTONK1,INPUT_PULLUP);
+  pinMode(BUTTONK2, INPUT_PULLUP);
 }
 
 void loop() {
