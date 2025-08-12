@@ -34,7 +34,6 @@ void setup()
 
   disp.init();//The initialization of the display
   Serial.begin(9400);
-  Serial.begin(9600);
   stickman();
   walking();
   humansensor();
