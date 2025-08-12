@@ -16,9 +16,15 @@ PassiveBuzzer buz(PassiveBuzzerPin);
 #define LED_YELLOW 7
 #define BUTTONK1 8
 #define BUTTONK2 9
+#define CLK 10//CLK of the TM1637 IC connect to D10 of OPEN-SMART UNO R3
+#define DIO 11//DIO of the TM1637 IC connect to D11 of OPEN-SMART UNO R3
+TM1637 disp(CLK,DIO);
+#define KNOB_PIN A2
 
+int LEDS[5] = {4, 5, 6, 7}; //array for leds
 
-void setup() {
+void setup() 
+{
   
 }
 
