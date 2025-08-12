@@ -169,3 +169,29 @@ void waiting (void)
   digitalWrite(LEDS[3], LOW);
   return;
 }
+
+void stickman(void)
+{
+   Serial.println("RED LIGHT!!!!!!! PLS STOP!!!!");
+   Serial.println("          o  ");
+   Serial.println("         /|\\ ");
+   Serial.println("         | | ");
+   return;
+}
+
+void walking(void)
+ {
+   Serial.println("          o  ");
+   Serial.println("         /|\\ ");
+   Serial.println("         / \\ ");
+   Serial.println("                  o  ");
+   Serial.println("                 /|\\ ");
+   Serial.println("                  |\\ ");
+   Serial.println("          o  ");
+   Serial.println("         /|\\ ");
+   Serial.println("         / \\ ");
+   Serial.println("  o  ");
+   Serial.println(" /|\\ ");
+   Serial.println(" /|  ");
+   return;
+  } 
