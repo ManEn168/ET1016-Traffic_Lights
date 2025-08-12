@@ -28,6 +28,9 @@ void setup()
 {
   for(l = 0; l < NUM_LEDS; l++)
   pinMode (LEDS[l],OUTPUT);
+
+  disp.init();//The initialization of the display
+  Serial.begin(9400);
 }
 
 void loop() {
