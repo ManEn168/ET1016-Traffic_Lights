@@ -29,8 +29,16 @@ void setup()
   for(l = 0; l < NUM_LEDS; l++)
   pinMode (LEDS[l],OUTPUT);
 
+  for(k = 0; k < NUM_BUTTONS; k++)
+ pinMode(BUTTONS[k], INPUT_PULLUP);
+
   disp.init();//The initialization of the display
   Serial.begin(9400);
+  Serial.begin(9400);
+  stickman();
+  walking();
+  humansensor();
+ Serial.begin(9600);
 }
 
 void loop() {
@@ -46,8 +54,7 @@ digitalWrite(LEDS[0], HIGH);
  
   digitalWrite(LEDS[1], HIGH);
   delay(100);
-
-    for(i = 7; i > 5; i --)
+    for(i = 25; i > 5; i --)
   {
    disp.display(i);//Display integer
    delay (1000);
@@ -73,11 +80,11 @@ delay(100);
   }
 }
   disp.display(0);
-  stickman();
   for(p=0;p<100;p++)
   {
   humansensor();
   }
+  stickman();
   digitalWrite(LEDS[0], HIGH);
   while (digitalRead(BUTTONS[0]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
  } 
@@ -125,6 +132,7 @@ buz.playTone (698,100);
   {
   humansensor();
   }
+  stickman();
   digitalWrite(LEDS[0], HIGH);
   digitalWrite(LEDS[1], LOW);
   while (digitalRead(BUTTONS[1]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
