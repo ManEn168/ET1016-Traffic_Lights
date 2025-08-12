@@ -139,3 +139,31 @@ buz.playTone (698,100);
  } 
  }
 }
+
+//Implementation
+void blink(int led, int ms_delay)
+{
+  digitalWrite(led, HIGH); // turn a LED on (HIGH is the voltage level)
+  delay(ms_delay); // wait for ? millisecond
+  digitalWrite(led, LOW); // turn a LED off by making the voltage LOW
+  delay(ms_delay); // wait for ? millisecond
+
+  // you may add more program statements to turn ON/OFF other LEDs
+  return;
+}
+
+void ONOFF (int led,int timewait)
+{
+digitalWrite(led,HIGH);
+delay(timewait);
+digitalWrite(led,LOW);
+return;
+}
+void waiting (void)
+{
+  digitalWrite(LEDS[3], HIGH);
+  ONOFF(LEDS[0], 1200); 
+  ONOFF(LEDS[2], 350);
+  digitalWrite(LEDS[3], LOW);
+  return;
+}
