@@ -26,6 +26,9 @@ int LEDS[5] = {4, 5, 6, 7}; //array for leds
 void blink(int led, int ms_delay);
 void ONOFF (int led,int timewait);
 void waiting (void);
+void stickman(void);
+void walking(void);
+void humansensor(void);
 
 void setup() 
 {
