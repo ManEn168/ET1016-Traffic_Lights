@@ -23,6 +23,9 @@ TM1637 disp(CLK,DIO);
 int LEDS[5] = {4, 5, 6, 7}; //array for leds
 
 //Prototype
+void blink(int led, int ms_delay);
+void ONOFF (int led,int timewait);
+void waiting (void);
 
 void setup() 
 {
