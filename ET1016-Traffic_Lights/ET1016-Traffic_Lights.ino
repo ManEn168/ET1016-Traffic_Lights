@@ -1,6 +1,6 @@
 //Name:Leecia Ang Rui En, Ting Man En
 //Admin No : 2517254,2516576
-//CLASS: DCEP/FT/A1/09
+//CLASS: DCEP/FT/1A/09
 //
 
 #include <Wire.h>
@@ -20,6 +20,7 @@ PassiveBuzzer buz(PassiveBuzzerPin);
 TM1637 disp(CLK,DIO);
 #define KNOB_PIN A2
 
+int i = 25, j=0, k=0, l=0, knobValue, p=0;
 int LEDS[5] = {4, 5, 6, 7}; //array for leds
 int BUTTONS[3] = {8, 9}; //array for buttons
 
@@ -48,7 +49,7 @@ void setup()
 }
 
 void loop() {
-digitalWrite(LEDS[0], HIGH); 
+  digitalWrite(LEDS[0], HIGH); 
   stickman();
  if (digitalRead(BUTTONS[0]) == 0) // check if button K1 is pressed (logic 0 when pressed)
  {
@@ -80,7 +81,7 @@ for(i = 5; i > 0; i --)
  for (j=1;j <= 5;j++)
  {
   blink (LEDS[1],30);
-delay(100);
+  delay(100);
   buz.playTone (698,100);
   delay(50);
   }
@@ -104,20 +105,20 @@ delay(100);
   
   int ms_time;
   waiting();
-   digitalWrite(LEDS[1], HIGH);
+  digitalWrite(LEDS[1], HIGH);
   delay(100);
 
     for(i = 40; i > 5; i --)
   {
-      disp.display(i);//Display integer
-  delay (1000);
+   disp.display(i);//Display integer
+   delay (1000);
   if(i==40)
   {
   Serial.println("3...2....1...");
   Serial.println("READY GOOOO!!!!!");
   }
    walking();
-  digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
+   digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
   } 
   
   for(i = 5; i > 0; i --)
@@ -126,10 +127,10 @@ delay(100);
 
   for (j=0;j<=5;j++)
   {
-  blink (LEDS[1],30);
-delay(100);
-buz.playTone (698,100);
-  delay(100);
+   blink (LEDS[1],30);
+   delay(100);
+   buz.playTone (698,100);
+   delay(100);
   }
   }
   disp.display(0);
