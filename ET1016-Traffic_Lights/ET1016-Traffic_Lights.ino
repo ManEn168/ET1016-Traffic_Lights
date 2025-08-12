@@ -8,7 +8,6 @@
 #include "RichShieldPassiveBuzzer.h"
 #define PassiveBuzzerPin 3
 PassiveBuzzer buz(PassiveBuzzerPin);
-
 #define NOTE_M4  698
 #define LED_RED 4
 #define LED_GREEN 5
@@ -23,9 +22,12 @@ TM1637 disp(CLK,DIO);
 
 int LEDS[5] = {4, 5, 6, 7}; //array for leds
 
+//Prototype
+
 void setup() 
 {
-  
+  for(l = 0; l < NUM_LEDS; l++)
+  pinMode (LEDS[l],OUTPUT);
 }
 
 void loop() {
