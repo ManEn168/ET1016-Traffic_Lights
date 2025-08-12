@@ -1,4 +1,4 @@
-//Name:Leecia, Man En
+//Name:Leecia Ang Rui En, Ting Man En
 //Admin No : 2517254,2516576
 //CLASS: DCEP/FT/A1/09
 //
@@ -21,6 +21,7 @@ TM1637 disp(CLK,DIO);
 #define KNOB_PIN A2
 
 int LEDS[5] = {4, 5, 6, 7}; //array for leds
+int BUTTONS[3] = {8, 9}; //array for buttons
 
 //Prototype
 void blink(int led, int ms_delay);
