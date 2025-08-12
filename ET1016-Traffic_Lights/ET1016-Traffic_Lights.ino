@@ -4,6 +4,7 @@
 //
 
 #include <Wire.h>
+#include "RichShieldTM1637.h"
 #include "RichShieldPassiveBuzzer.h"
 #define PassiveBuzzerPin 3
 PassiveBuzzer buz(PassiveBuzzerPin);
