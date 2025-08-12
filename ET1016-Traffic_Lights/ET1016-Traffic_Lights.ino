@@ -29,6 +29,100 @@ void setup()
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+digitalWrite(LEDS[0], HIGH); 
+  stickman();
+ if (digitalRead(BUTTONS[0]) == 0) // check if button K1 is pressed (logic 0 when pressed)
+ {
+  delay(300); // add a small delay to debounce the button
 
+ //Blue Button (Normal) 
+  int ms_time;
+  waiting();
+ 
+  digitalWrite(LEDS[1], HIGH);
+  delay(100);
+
+    for(i = 7; i > 5; i --)
+  {
+   disp.display(i);//Display integer
+   delay (1000);
+
+   if(i==25)
+   {
+    Serial.println("3...2....1...");
+    Serial.println("READY GOOOO!!!!!");
+   }
+   walking();
+   digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
+  }
+  
+for(i = 5; i > 0; i --)
+{
+   disp.display(i);//Display integer
+ for (j=1;j <= 5;j++)
+ {
+  blink (LEDS[1],30);
+delay(100);
+  buz.playTone (698,100);
+  delay(50);
+  }
+}
+  disp.display(0);
+  stickman();
+  for(p=0;p<100;p++)
+  {
+  humansensor();
+  }
+  digitalWrite(LEDS[0], HIGH);
+  while (digitalRead(BUTTONS[0]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
+ } 
+
+ 
+
+ //Yellow Button (Handi)
+ if (digitalRead(BUTTONS[1]) == 0) // check if button K1 is pressed (logic 0 when pressed)
+ {
+  delay(300); // add a small delay to debounce the button
+  
+  int ms_time;
+  waiting();
+   digitalWrite(LEDS[1], HIGH);
+  delay(100);
+
+    for(i = 40; i > 5; i --)
+  {
+      disp.display(i);//Display integer
+  delay (1000);
+  if(i==40)
+  {
+  Serial.println("3...2....1...");
+  Serial.println("READY GOOOO!!!!!");
+  }
+   walking();
+  digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
+  } 
+  
+  for(i = 5; i > 0; i --)
+  {
+  disp.display(i);//Display integer
+
+  for (j=0;j<=5;j++)
+  {
+  blink (LEDS[1],30);
+delay(100);
+buz.playTone (698,100);
+  delay(100);
+  }
+  }
+  disp.display(0);
+  stickman();
+  for(p=0;p<200;p++)
+  {
+  humansensor();
+  }
+  digitalWrite(LEDS[0], HIGH);
+  digitalWrite(LEDS[1], LOW);
+  while (digitalRead(BUTTONS[1]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
+ } 
+ }
 }
