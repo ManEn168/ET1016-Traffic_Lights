@@ -200,3 +200,23 @@ void walking(void)
    Serial.println(" /|  ");
    return;
   } 
+
+void humansensor(void)
+ {
+  LDRValue=analogRead(LDR);
+  Serial.print("LDR value :");
+  Serial.println(LDRValue);
+
+   if (LDRValue < 1023 && LDRValue >= 0)  // Threshold value - adjust as needed
+  {
+    
+    digitalWrite(LEDS[1], HIGH);  // Green LED ON
+    
+  }
+  else
+  {
+    digitalWrite(LEDS[1], LOW);
+    digitalWrite(LEDS[0], HIGH); 
+  }
+    
+ }
