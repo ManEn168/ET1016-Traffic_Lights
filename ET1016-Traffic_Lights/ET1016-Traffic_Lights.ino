@@ -94,6 +94,7 @@ for(i = 5; i > 0; i --)
   }
   stickman();
   digitalWrite(LEDS[0], HIGH);
+  digitalWrite(LEDS[1], LOW);
   while (digitalRead(BUTTONS[0]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
  } 
 
