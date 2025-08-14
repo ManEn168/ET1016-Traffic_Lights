@@ -22,6 +22,7 @@ PassiveBuzzer buz(PassiveBuzzerPin);
 TM1637 disp(CLK,DIO);
 #define LDR A2
 
+//Variable Declearation
 int i = 25, j=0, k=0, l=0, LDRValue, p=0;
 int LEDS[5] = {4, 5, 6, 7}; //array for leds
 int BUTTONS[3] = {8, 9}; //array for buttons
@@ -65,12 +66,12 @@ void loop() {
     for(i = 25; i > 5; i --)
   {
    disp.display(i);//Display integer
-   delay (1000);
+   delay (1000);//Delay for 1s
 
    if(i==25)
    {
-    Serial.println("3...2....1...");
-    Serial.println("READY GOOOO!!!!!");
+    Serial.println("3...2....1...");    //Print '3...2....1...'
+    Serial.println("READY GOOOO!!!!!"); //Print 'READY GOOOO!!!!!'
    }
    walking();
    digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
@@ -108,16 +109,16 @@ for(i = 5; i > 0; i --)
   int ms_time;
   waiting();
   digitalWrite(LEDS[1], HIGH);
-  delay(100);
+  delay(100);  // delay for 0.1s
 
     for(i = 40; i > 5; i --)
   {
-   disp.display(i);//Display integer
-   delay (1000);
+   disp.display(i);  //Display integer
+   delay (1000);     //delay 1s
   if(i==40)
   {
-  Serial.println("3...2....1...");
-  Serial.println("READY GOOOO!!!!!");
+  Serial.println("3...2....1...");            //Print '3...2....1...'
+  Serial.println("READY GOOOO!!!!!");         //Print 'READY GOOOO!!!!!'
   }
    walking();
    digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
@@ -129,16 +130,16 @@ for(i = 5; i > 0; i --)
 
   for (j=0;j<=5;j++)
   {
-   blink (LEDS[1],30);
-   delay(100);
-   buz.playTone (698,100);
+   blink (LEDS[1],30);           // Green Led blink
+   delay(100);                   // delay 0.1s
+   buz.playTone (698,100);       // buzzer
    delay(100);
   }
   }
-  disp.display(0);
+  disp.display(0);               // Display 0 on seven segment display
   for(p=0;p<200;p++)
   {
-  humansensor();
+  humansensor();                 //
   }
   stickman();
   digitalWrite(LEDS[0], HIGH);
