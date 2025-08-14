@@ -136,7 +136,6 @@ for(i = 5; i > 0; i --)
   }
   }
   disp.display(0);
-  stickman();
   for(p=0;p<200;p++)
   {
   humansensor();
