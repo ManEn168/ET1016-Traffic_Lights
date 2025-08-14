@@ -147,7 +147,7 @@ for(i = 5; i > 0; i --)
   while (digitalRead(BUTTONS[1]) == 0);/*Ensure the button is released (i.e. back to logic 1) before executing the next statement */
  } 
  }
-}
+
 
 //Implementation
 void blink(int led, int ms_delay)
