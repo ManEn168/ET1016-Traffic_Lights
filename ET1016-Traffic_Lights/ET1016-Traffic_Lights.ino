@@ -47,7 +47,6 @@ void setup()
   stickman();
   walking();
   humansensor();
- Serial.begin(9600);
 }
 
 void loop() {
