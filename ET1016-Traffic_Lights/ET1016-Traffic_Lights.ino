@@ -10,15 +10,15 @@
 PassiveBuzzer buz(PassiveBuzzerPin);
 #define NOTE_M4  698
 #define LED_RED 4             //The red Led is connected to Digital Pin 4 of Arduino Uno
-#define LED_GREEN 5
-#define LED_BLUE 6
-#define LED_YELLOW 7
+#define LED_GREEN 5           //The green Led is connected to Digital Pin 5 of Arduino Uno
+#define LED_BLUE 6            //The blue Led is connected to Digital Pin 6 of Arduino Uno
+#define LED_YELLOW 7          //The yellow Led is connected to Digital Pin 7 of Arduino Uno
 #define NUM_LEDS 4
 #define NUM_BUTTONS 2
 #define BUTTONK1 8
 #define BUTTONK2 9
-#define CLK 10//CLK of the TM1637 IC connect to D10 of OPEN-SMART UNO R3
-#define DIO 11//DIO of the TM1637 IC connect to D11 of OPEN-SMART UNO R3
+#define CLK 10               //CLK of the TM1637 IC connect to D10 of OPEN-SMART UNO R3
+#define DIO 11               //DIO of the TM1637 IC connect to D11 of OPEN-SMART UNO R3
 TM1637 disp(CLK,DIO);
 #define LDR A2
 
