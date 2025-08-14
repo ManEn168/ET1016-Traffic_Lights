@@ -13,6 +13,8 @@ PassiveBuzzer buz(PassiveBuzzerPin);
 #define LED_GREEN 5
 #define LED_BLUE 6
 #define LED_YELLOW 7
+#define NUM_LEDS 4
+#define NUM_BUTTONS 2
 #define BUTTONK1 8
 #define BUTTONK2 9
 #define CLK 10//CLK of the TM1637 IC connect to D10 of OPEN-SMART UNO R3
