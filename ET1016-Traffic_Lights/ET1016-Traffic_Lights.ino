@@ -38,7 +38,7 @@ void humansensor(void);
 void setup() 
 {
   for(l = 0; l < NUM_LEDS; l++)
-  pinMode (LEDS[l],OUTPUT);
+  pinMode (LEDS[l],OUTPUT);                   // initialize each of the digital pins as an output.
 
   for(k = 0; k < NUM_BUTTONS; k++)
  pinMode(BUTTONS[k], INPUT_PULLUP);
@@ -63,7 +63,7 @@ void loop() {
  
   digitalWrite(LEDS[1], HIGH);
   delay(100);
-    for(i = 25; i > 5; i --)
+    for(i = 25; i > 5; i --)            //Countdown of 7 segment display
   {
    disp.display(i);//Display integer
    delay (1000);//Delay for 1s
@@ -110,8 +110,8 @@ for(i = 5; i > 0; i --)
   waiting();
   digitalWrite(LEDS[1], HIGH);
   delay(100);  // delay for 0.1s
-
-    for(i = 40; i > 5; i --)
+   
+    for(i = 40; i > 5; i --)                 //Countdown of 7 segment display
   {
    disp.display(i);  //Display integer
    delay (1000);     //delay 1s
@@ -179,7 +179,7 @@ void waiting (void)
 
 void stickman(void)
 {
-    if (digitalRead(LEDS[0]==1))
+    if (digitalRead(LEDS[0]==1))                     //print out once when Red light is ON to the serial monitor
   {
    Serial.println("RED LIGHT!!!!!!! PLS STOP!!!!");
    Serial.println("          o  ");
@@ -189,7 +189,7 @@ void stickman(void)
   } 
 }
 
-void walking(void)
+void walking(void)                           //print out repeatedly when green light is ON to the serial monitor
  {
    Serial.println("          o  ");
    Serial.println("         /|\\ ");
@@ -208,9 +208,9 @@ void walking(void)
 
 void humansensor(void)
  {
-  LDRValue=analogRead(LDR);
+  LDRValue=analogRead(LDR);               // read value of the LDR and assign it to the variable 
   Serial.print("LDR value :");
-  Serial.println(LDRValue);
+  Serial.println(LDRValue);               //print out the value of the LDR to the serial monitor
 
    if (LDRValue < 1023 && LDRValue >= 0)  // Threshold value - adjust as needed
   {
@@ -220,8 +220,8 @@ void humansensor(void)
   }
   else
   {
-    digitalWrite(LEDS[1], LOW);
-    digitalWrite(LEDS[0], HIGH); 
+    digitalWrite(LEDS[1], LOW);   // Green LED OFF
+    digitalWrite(LEDS[0], HIGH);  // Red LED ON
   }
     return;
  }
