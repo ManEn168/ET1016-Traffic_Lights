@@ -178,11 +178,14 @@ void waiting (void)
 
 void stickman(void)
 {
+    if (digitalRead(LEDS[0]==1))
+  {
    Serial.println("RED LIGHT!!!!!!! PLS STOP!!!!");
    Serial.println("          o  ");
    Serial.println("         /|\\ ");
    Serial.println("         | | ");
    return;
+  } 
 }
 
 void walking(void)
