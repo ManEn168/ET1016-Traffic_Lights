@@ -9,7 +9,7 @@
 #define PassiveBuzzerPin 3
 PassiveBuzzer buz(PassiveBuzzerPin);
 #define NOTE_M4  698
-#define LED_RED 4
+#define LED_RED 4             //The red Led is connected to Digital Pin 4 of Arduino Uno
 #define LED_GREEN 5
 #define LED_BLUE 6
 #define LED_YELLOW 7
