@@ -218,5 +218,5 @@ void humansensor(void)
     digitalWrite(LEDS[1], LOW);
     digitalWrite(LEDS[0], HIGH); 
   }
-    
+    return;
  }
