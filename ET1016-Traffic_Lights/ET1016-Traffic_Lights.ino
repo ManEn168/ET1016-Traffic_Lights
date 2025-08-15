@@ -170,10 +170,10 @@ return;
 }
 void waiting (void)
 {
-  digitalWrite(LEDS[3], HIGH);
+  digitalWrite(LEDS[2], HIGH);
   ONOFF(LEDS[0], 1200); 
-  ONOFF(LEDS[2], 350);
-  digitalWrite(LEDS[3], LOW);
+  ONOFF(LEDS[3], 350);
+  digitalWrite(LEDS[2], LOW);
   return;
 }
 
