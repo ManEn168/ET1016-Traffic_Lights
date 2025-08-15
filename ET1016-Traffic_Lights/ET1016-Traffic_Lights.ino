@@ -77,21 +77,21 @@ void loop() {
    digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
   }
   
-for(i = 5; i > 0; i --)
+for(i = 5; i > 0; i --) //Last 5 seconds
 {
    disp.display(i);//Display integer
  for (j=1;j <= 5;j++)
  {
-  blink (LEDS[1],30);
+  blink (LEDS[1],30); //Blinking lights
   delay(100);
-  buz.playTone (698,100);
+  buz.playTone (698,100); //sound to alert people left with 5 seconds to cross
   delay(50);
   }
 }
   disp.display(0);
   for(p=0;p<100;p++)
   {
-  humansensor();
+  humansensor(); //in case people still crossing, green light remain
   }
   stickman();
   digitalWrite(LEDS[0], HIGH);
@@ -124,7 +124,7 @@ for(i = 5; i > 0; i --)
    digitalWrite(LEDS[1], HIGH);  // turn the LED on (HIGH is the voltage level)
   } 
   
-  for(i = 5; i > 0; i --)
+  for(i = 5; i > 0; i --) //last 5 seconds to cross
   {
   disp.display(i);//Display integer
 
@@ -132,14 +132,14 @@ for(i = 5; i > 0; i --)
   {
    blink (LEDS[1],30);           // Green Led blink
    delay(100);                   // delay 0.1s
-   buz.playTone (698,100);       // buzzer
+   buz.playTone (698,100);       // buzzer to alert people the timing left to cross
    delay(100);
   }
   }
   disp.display(0);               // Display 0 on seven segment display
   for(p=0;p<200;p++)
   {
-  humansensor();                 //
+  humansensor();                 //in case people are still crossing, green light remain on
   }
   stickman();
   digitalWrite(LEDS[0], HIGH);
@@ -170,10 +170,10 @@ return;
 }
 void waiting (void)
 {
-  digitalWrite(LEDS[2], HIGH);
-  ONOFF(LEDS[0], 1200); 
-  ONOFF(LEDS[3], 350);
-  digitalWrite(LEDS[2], LOW);
+  digitalWrite(LEDS[2], HIGH); //blue led on ro indicate someone has press the button
+  ONOFF(LEDS[0], 1200); //delay for red light to turn green
+  ONOFF(LEDS[3], 350); //yellow led on for a while for cars to slow down
+  digitalWrite(LEDS[2], LOW); //blue led off once green led on
   return;
 }
 
