@@ -80,7 +80,7 @@ void loop() {
 for(i = 5; i > 0; i --) //Last 5 seconds
 {
    disp.display(i);//Display integer
- for (j=1;j <= 5;j++)
+ for (j=0;j <= 5;j++)
  {
   blink (LEDS[1],30); //Blinking lights
   delay(100);
