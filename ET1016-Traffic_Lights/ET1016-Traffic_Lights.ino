@@ -52,7 +52,6 @@ void setup()
 
 void loop() {
   digitalWrite(LEDS[0], HIGH); 
-  stickman();
  if (digitalRead(BUTTONS[0]) == 0) // check if button K1 is pressed (logic 0 when pressed)
  {
   delay(300); // add a small delay to debounce the button
@@ -63,6 +62,7 @@ void loop() {
  
   digitalWrite(LEDS[1], HIGH);
   delay(100);
+  stickman();
     for(i = 25; i > 5; i --)            //Countdown of 7 segment display
   {
    disp.display(i);//Display integer
@@ -110,6 +110,7 @@ for(i = 5; i > 0; i --) //Last 5 seconds
   waiting();
   digitalWrite(LEDS[1], HIGH);
   delay(100);  // delay for 0.1s
+  stickman();
    
     for(i = 40; i > 5; i --)                 //Countdown of 7 segment display
   {
@@ -223,5 +224,5 @@ void humansensor(void)
     digitalWrite(LEDS[1], LOW);   // Green LED OFF
     digitalWrite(LEDS[0], HIGH);  // Red LED ON
   }
-    return;
+   
  }
